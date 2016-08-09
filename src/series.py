@@ -9,11 +9,11 @@ def fibonacci_iter(n):
     try:
         n = int(n)
     except:
-        print(u"Please enter a valid integer.")
+        print(u'Please enter a valid integer.')
         return -2
     else:
         if n < 1:
-            print(u"Please enter an integer greater than or equal to 1.")
+            print(u'Please enter an integer greater than or equal to 1.')
             return -1
         while n > len(series):
             series.append(series[-1] + series[-2])
@@ -27,11 +27,11 @@ def fibonacci_rec(n, series=[0, 1]):
         series[0] = int(series[0])
         series[1] = int(series[1])
     except:
-        print(u"Please enter a valid integer.")
+        print(u'Please enter a valid integer.')
         return -2
     else:
         if n < 1:
-            print(u"Please enter an integer greater than or equal to 1.")
+            print(u'Please enter an integer greater than or equal to 1.')
             return -1
         if n < len(series):
             return series[n - 1]
@@ -46,11 +46,11 @@ def lucas(n):
     try:
         n = int(n)
     except:
-        print(u"Please enter a valid integer.")
+        print(u'Please enter a valid integer.')
         return -2
     else:
         if n < 1:
-            print(u"Please enter an integer greater than or equal to 1.")
+            print(u'Please enter an integer greater than or equal to 1.')
             return -1
         while n > len(series):
             series.append(series[-1] + series[-2])
@@ -65,11 +65,11 @@ def sum_series(n, first=0, second=1):
         first = int(first)
         second = int(second)
     except:
-        print(u"Please enter only valid integers.")
+        print(u'Please enter only valid integers.')
         return -2
     else:
         if n < 1:
-            print(u"Please enter an integer greater than or equal to 1.")
+            print(u'Please enter an integer greater than or equal to 1.')
             return -1
         while n > len(series):
             series.append(series[-1] + series[-2])
