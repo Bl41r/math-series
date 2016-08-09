@@ -18,7 +18,7 @@ FIBONACCI_TABLE = [
 LUCAS_TABLE = [
     (-5, -1),
     (0, -1),
-    #('string', -2),
+    ('string', -2),
     (1, 2),
     (2, 1),
     (3, 3),
@@ -36,6 +36,13 @@ def test_fibonacci_iter(n, result):
     assert fibonacci_iter(n) == result
 
 
-#def test_fibonacci_rec(n, result):
-#    from series import fibonacci_rec
-#    assert fibonacci_rec(n) == result
+@pytest.mark.parametrize('n, result', FIBONACCI_TABLE)
+def test_fibonacci_rec(n, result):
+    from series import fibonacci_rec
+    assert fibonacci_rec(n) == result
+
+
+@pytest.mark.parametrize('n, result', LUCAS_TABLE)
+def test_lucas(n, result):
+    from series import lucas
+    assert lucas(n) == result
