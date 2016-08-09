@@ -3,7 +3,7 @@ from __future__ import print_function
 
 def fibonacci_iter(n):
     series = [0, 1]
-    i = 2
+    i = len(series)
     try:
         n = int(n)
     except:
@@ -26,5 +26,4 @@ def fibonacci_rec(n, series=[0, 1]):
         if n < len(series):
             return series[n-1]
         else:
-            series.append(series[len(series) - 1] + series[len(series) - 2])
-            return fibonacci_rec(n, series)
+            return fibonacci_rec(n, series.append(series[len(series) - 1] + series[len(series) - 2]))
