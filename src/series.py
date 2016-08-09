@@ -75,9 +75,10 @@ def sum_series(n, first=0, second=1):
 def main():
     """Linter is stupid."""
     if len(sys.argv) > 2:
-        print(u'usage: ./series.py')
+        print(u'usage: python3 series.py')
         sys.exit(1)
     else:
+        print(sys.argv[0])
         print(u'Welcome to the mathematical series python module.')
         print(u'Here are our available functions:')
         print(u"")
