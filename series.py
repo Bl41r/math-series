@@ -15,13 +15,15 @@ def fibonacci_iter(n):
 
 
 def fibonacci_rec(n, series=[0, 1]):
+    print(series)
     try:
         n = int(n)
     except:
         print(u"Please enter a valid integer.")
         return -1
     finally:
-        if n <= len(series):
+        if n < len(series):
             return series[n-1]
         else:
-            return fibonacci_rec(n, series.append(series[len(series)-1] + series[len(series)-2]))
+            series.append(series[len(series)-1] + series[len(series)-2])
+            return fibonacci_rec(n, series)
