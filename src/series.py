@@ -24,6 +24,8 @@ def fibonacci_rec(n, series=[0, 1]):
     """Return the nth value of the Fibonacci series, using a recursive approach."""
     try:
         n = int(n)
+        series[0] = int(series[0])
+        series[1] = int(series[1])
     except:
         print(u"Please enter a valid integer.")
         return -2
@@ -60,8 +62,10 @@ def sum_series(n, first=0, second=1):
     series = [first, second]
     try:
         n = int(n)
+        first = int(first)
+        second = int(second)
     except:
-        print(u"Please enter a valid integer.")
+        print(u"Please enter only valid integers.")
         return -2
     else:
         if n < 1:
