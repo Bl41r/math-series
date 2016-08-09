@@ -29,6 +29,11 @@ LUCAS_TABLE = [
     (8, 29),
 ]
 
+CUSTOM_TABLE = [
+    (3, 2, 3, 5),
+    (4, 4, 5, 14)
+]
+
 
 @pytest.mark.parametrize('n, result', FIBONACCI_TABLE)
 def test_fibonacci_iter(n, result):
@@ -46,3 +51,15 @@ def test_fibonacci_rec(n, result):
 def test_lucas(n, result):
     from series import lucas
     assert lucas(n) == result
+
+
+@pytest.mark.parametrize('n, result', FIBONACCI_TABLE)
+def test_sum_series1(n, result):
+    from series import sum_series
+    assert sum_series(n) == result
+
+
+@pytest.mark.parametrize('n, one, two, result', CUSTOM_TABLE)
+def test_sum_series2(n, one, two, result):
+    from series import sum_series
+    assert sum_series(n, one, two) == result
